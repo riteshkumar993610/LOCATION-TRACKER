@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🛡️ Cyber Demo Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="dash-wrap">
+
+    <!-- Header -->
+    <div class="dash-hdr">
+      <div>
+        <h1 class="dash-title">🛡️ Cybersecurity Awareness</h1>
+        <div class="dash-sub">Live Conference Dashboard</div>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <button onclick="exportCSV()" class="export-btn">📥 Export CSV</button>
+        <button onclick="clearData()" class="clear-btn">🗑️ Clear</button>
+        <div class="live-pill">
+          <div class="live-dot"></div>
+          LIVE
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-n" id="s-total">0</div>
+        <div class="stat-lbl">Total Clicks</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-n green" id="s-loc">0</div>
+        <div class="stat-lbl">Location Shared</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-n red" id="s-den">0</div>
+        <div class="stat-lbl">Denied</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-n orange" id="s-mobile">0</div>
+        <div class="stat-lbl">Mobile Users</div>
+      </div>
+    </div>
+
+    <!-- Locations List -->
+    <div class="locs-list" id="locsList">
+      <div class="empty-state">
+        <div class="emp-icon">📡</div>
+        <div class="emp-msg">Waiting for clicks...</div>
+        <div class="emp-sub">Demo link bhejo aur click hone ka wait karo</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Socket.io -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

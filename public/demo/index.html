@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Alert</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-bar">⚠️ SECURITY ALERT — IMMEDIATE ACTION REQUIRED</div>
+
+  <!-- Demo Page -->
+  <div class="demo-wrap" id="demoPage">
+    <div class="demo-card">
+      <div class="warn-icon">🚨</div>
+      <h1 class="demo-h1">Account Suspended!</h1>
+      <p class="demo-desc">
+        Aapke account par <strong>suspicious activity</strong> detect hui hai.
+        Verify kijiye — warna aapka account permanently block ho sakta hai.
+      </p>
+
+      <div class="timer-block">
+        <div class="timer-lbl">⏳ Session expire hogi in</div>
+        <div class="timer-val" id="timer">02:00</div>
+      </div>
+
+      <div class="preview-list">
+        <div class="prev-row">
+          <span class="pk">📱 Device</span>
+          <span class="pv" id="deviceType">Detecting...</span>
+        </div>
+        <div class="prev-row">
+          <span class="pk">🌐 Browser</span>
+          <span class="pv" id="browserName">Detecting...</span>
+        </div>
+        <div class="prev-row">
+          <span class="pk">💻 OS</span>
+          <span class="pv" id="osName">Detecting...</span>
+        </div>
+        <div class="prev-row">
+          <span class="pk">📍 Location</span>
+          <span class="pv red" id="locStatus">⚠️ Not Verified</span>
+        </div>
+      </div>
+
+      <button class="cta-btn" id="ctaBtn" onclick="verify()">
+        🔐 VERIFY NOW
+      </button>
+      <p class="fine-print">
+        Clicking verifies your identity using device location for security purposes.
+      </p>
+    </div>
+  </div>
+
+  <!-- Reveal Page -->
+  <div class="reveal-wrap" id="revealPage" style="display:none;">
+    <div class="hacked-banner" id="hackedBanner">🎯 Got You!</div>
+
+    <div class="rev-card">
+      <div class="sec-hd">📊 Captured Data</div>
+      <div class="data-table" id="dataTable"></div>
+      <a id="mapsBtn" href="#" target="_blank" class="maps-btn" style="display:none;">
+        🗺️ Apni Location Google Maps Par Dekho
+      </a>
+    </div>
+
+    <div class="tips-card">
+      <div class="tips-h">🛡️ Khud ko Hackers Se Kaise Bachayein?</div>
+      <div class="tip">✅ <span>Anjaan number ya link par <strong>kabhi click mat karo</strong></span></div>
+      <div class="tip">✅ <span>Urgency ya darr dikhaye? <strong>Ye phishing trick hai!</strong></span></div>
+      <div class="tip">✅ <span>Location permission sirf <strong>trusted apps</strong> ko dein</span></div>
+      <div class="tip">✅ <span>URL check karo — <strong>HTTPS</strong> hona chahiye</span></div>
+      <div class="tip">✅ <span>Bank/OTP messages <strong>directly helpline se verify karo</strong></span></div>
+      <div class="tip">✅ <span>Suspicious link mila to <strong>delete karo, forward mat karo</strong></span></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
